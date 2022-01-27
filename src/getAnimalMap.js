@@ -1,7 +1,21 @@
 const data = require('../data/zoo_data');
 
 function getAnimalMap(options) {
-  // seu código aqui
+  if (options === undefined || options.includeNames === undefined) {
+    const NE = data.species.filter((element) => element.location === 'NE')
+      .map((element) => `${element.name}`);
+
+    const NW = data.species.filter((element) => element.location === 'NW')
+      .map((element) => `${element.name}`);
+
+    const SE = data.species.filter((element) => element.location === 'SE')
+      .map((element) => `${element.name}`);
+
+    const SW = data.species.filter((element) => element.location === 'SW')
+      .map((element) => `${element.name}`);
+
+    return { NE, NW, SE, SW };
+  }
 }
 
 module.exports = getAnimalMap;
