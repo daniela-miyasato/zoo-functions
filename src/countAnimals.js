@@ -2,7 +2,7 @@ const data = require('../data/zoo_data');
 
 function countAnimals(animal) {
   const objeto = {};
-  // const especie = data.species.find((element) => element.name === animal.specie);
+  // const especie = data.species.find((element) => element.name === animal.specie); - (NÃO FUNFA)
 
   if (animal === undefined) {
     data.species.forEach((elemento) => { objeto[elemento.name] = elemento.residents.length; });

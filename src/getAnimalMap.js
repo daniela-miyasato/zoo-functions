@@ -16,6 +16,9 @@ function getAnimalMap(options) {
 
     return { NE, NW, SE, SW };
   }
+  // if (options.includeNames === true) {
+  // }
 }
 
+console.log(getAnimalMap());
 module.exports = getAnimalMap;
